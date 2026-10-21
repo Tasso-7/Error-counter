@@ -5,7 +5,7 @@
 #include <map>
 
 using namespace std;
-typedef double decimal;
+typedef long double decimal;
 
 struct num{
     decimal val=0, err=0;
@@ -79,8 +79,8 @@ struct num{
     }
     num operator/=(num other){
         decimal r = rel() + other.rel();
-        val = val*other.val;
-        err = val / r;
+        val = val/other.val;
+        err = r*val;
         return num (val, err);
     }
 
