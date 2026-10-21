@@ -68,7 +68,7 @@ struct num{
     }
     num operator-=(num other){
         val += other.val;
-        err -= other.err;
+        err += other.err;
         return num (val, err);
     }
     num operator*=(num other){
