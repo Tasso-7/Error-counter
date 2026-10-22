@@ -36,6 +36,9 @@ struct num{
     }
 
     decimal rel(){
+        if(val == 0){
+            return 0;
+        }
         return err/val;
     }
 
